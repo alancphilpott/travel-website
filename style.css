@@ -164,7 +164,6 @@ body {
   height: 150%;
   background: var(--bgColor);
   left: 0;
-  top: -15%;
 }
 
 .cursor {
@@ -173,6 +172,54 @@ body {
   border: 2px solid var(--white);
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+}
+
+.cursor.nav-active {
+  background: var(--mountain);
+  transform: scale(3);
+}
+
+.cursor.explore-active {
+  background: var(--white);
+  transform: scale(3);
+}
+
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+}
+
+.title-swipe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t-swipe1 {
+  background: var(--mountain);
+}
+.t-swipe2 {
+  background: var(--hike);
+}
+.t-swipe3 {
+  background: var(--fashion);
 }
 
 .scrollmagic-pin-spacer {

@@ -1,4 +1,5 @@
 let controller, slideScene, pageScene
+let mouse = document.querySelector('.cursor')
 
 const animateSlides = () => {
   controller = new ScrollMagic.Controller()
@@ -49,5 +50,30 @@ const animateSlides = () => {
       .addTo(controller)
   })
 }
+
+const cursor = (e) => {
+  mouse.style.top = e.pageY + 'px'
+  mouse.style.left = e.pageX + 'px'
+}
+
+const activeCursor = (e) => {
+  const item = e.target
+
+  if (item.id === 'logo' || item.classList.contains('burger')) {
+    mouse.classList.add('nav-active')
+  } else if (item.classList.contains('explore')) {
+    mouse.classList.add('explore-active')
+    mouse.querySelector('span').innerText = 'Tap'
+    gsap.to('.title-swipe', 1, { y: '0%' })
+  } else {
+    mouse.classList.remove('nav-active')
+    mouse.classList.remove('explore-active')
+    mouse.querySelector('span').innerText = ''
+    gsap.to('.title-swipe', 1, { y: '100%' })
+  }
+}
+
+window.addEventListener('mousemove', cursor)
+window.addEventListener('mouseover', activeCursor)
 
 animateSlides()
