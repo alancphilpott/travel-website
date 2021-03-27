@@ -16,6 +16,7 @@
 body {
   background: var(--bgColor);
   font-family: 'Monstserrat', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 #logo {
@@ -160,10 +161,10 @@ body {
 .reveal-text {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 150%;
   background: var(--bgColor);
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 .cursor {
@@ -172,4 +173,8 @@ body {
   border: 2px solid var(--white);
   border-radius: 50%;
   position: absolute;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
 }
