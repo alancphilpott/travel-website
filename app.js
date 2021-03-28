@@ -92,8 +92,25 @@ const navToggle = (e) => {
   }
 }
 
+barba.init({
+  views: [
+    {
+      namespace: 'home',
+      beforeEnter() {
+        animateSlides()
+      },
+      beforeLeave() {
+        slideScene.destroy()
+        pageScene.destroy()
+        controller.destroy()
+      }
+    },
+    {
+      namespace: 'fashion'
+    }
+  ]
+})
+
 window.addEventListener('mousemove', cursor)
 window.addEventListener('mouseover', activeCursor)
 burger.addEventListener('click', navToggle)
-
-animateSlides()
