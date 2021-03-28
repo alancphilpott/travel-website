@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
 }
 
+body.hide {
+  overflow: hidden;
+}
+
 #logo {
   color: var(--white);
   font-family: 'Abril Fatface';
@@ -38,6 +42,8 @@ body {
   justify-content: space-between;
   color: var(--white);
   font-size: 1rem;
+  z-index: 2;
+  position: relative;
 }
 
 .line1,
