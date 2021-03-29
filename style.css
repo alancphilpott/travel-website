@@ -321,3 +321,152 @@ main {
   background: var(--fashion);
   z-index: 3;
 }
+
+@media screen and (max-width: 1760px) {
+  .hero-desc h2 {
+    font-size: 4rem;
+  }
+
+  .hero-desc p {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .hero-desc {
+    padding: 3rem;
+  }
+
+  .hero-desc h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .hero-desc {
+    padding: 2rem;
+  }
+
+  .hero-desc h2 {
+    font-size: 3rem;
+  }
+
+  .hero-desc p {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .hero-img {
+    position: relative;
+    flex: 1;
+    flex-basis: 20rem;
+    overflow: hidden;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-img img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+  }
+
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-img {
+    padding-top: 3rem;
+  }
+
+  .hero-desc {
+    padding: 0;
+  }
+
+  .hero-desc h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+  }
+
+  .hero-desc p {
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+
+  .fashion-text p {
+    margin-bottom: 5rem;
+    padding: 0;
+  }
+
+  .fashion-text h1 {
+    margin: 2rem 0;
+  }
+
+  .fashion-nr {
+    font-size: 8rem;
+  }
+
+  .nav-bar {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-links {
+    font-size: 2rem;
+    padding: 6rem 0 2rem 0;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .explore {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hero-img {
+    padding-top: 7rem;
+  }
+
+  .nav-bar {
+    display: block;
+    text-align: center;
+  }
+}
