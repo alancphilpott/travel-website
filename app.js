@@ -1,4 +1,4 @@
-let controller, slideScene, pageScene
+let controller, slideScene, pageScene, detailScene
 const mouse = document.querySelector('.cursor')
 const burger = document.querySelector('.burger')
 const logo = document.querySelector('#logo')
@@ -32,7 +32,7 @@ const animateSlides = () => {
       reverse: false
     })
       .setTween(slideTimeline)
-      .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'slide' })
+      // .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'slide' })
       .addTo(controller)
 
     const pageTimeline = gsap.timeline()
@@ -48,7 +48,7 @@ const animateSlides = () => {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(pageTimeline)
-      .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'page', indent: 200 })
+      // .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'page', indent: 200 })
       .addTo(controller)
   })
 }
@@ -93,6 +93,40 @@ const navToggle = (e) => {
   }
 }
 
+const detailAnimation = () => {
+  controller = new ScrollMagic.Controller()
+  const slides = document.querySelectorAll('.detail-slide')
+
+  slides.forEach((slide, index, slides) => {
+    const slideTimeline = gsap.timeline({ defaults: { duration: 1 } })
+
+    let nextSlide = slides.length - 1 === index ? 'end' : slides[index + 1]
+    const nextImg = nextSlide.querySelector('img')
+
+    slideTimeline.fromTo(slide, { opacity: 1 }, { opacity: 0 })
+    slideTimeline.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, '-=0.75')
+
+    slideTimeline.fromTo(nextImg, { opacity: 0 }, { opacity: 1 })
+    slideTimeline.fromTo(nextImg, { x: '50%' }, { x: '0%' }, '-=1.3')
+    slideTimeline.fromTo(nextImg, { y: '-50%' }, { y: '0%' }, '-=1.3')
+
+    detailScene = new ScrollMagic.Scene({
+      triggerElement: slide,
+      duration: '100%',
+      triggerHook: 0
+    })
+      .setPin(slide, { pushFollowers: false })
+      .setTween(slideTimeline)
+      // .addIndicators({
+      //   colorStart: 'white',
+      //   colorTrigger: 'white',
+      //   name: 'detail-slide',
+      //   indent: 200
+      // })
+      .addTo(controller)
+  })
+}
+
 barba.init({
   views: [
     {
@@ -112,7 +146,12 @@ barba.init({
       namespace: 'fashion',
       beforeEnter() {
         logo.href = '../index.html'
+        detailAnimation()
         gsap.fromTo('.nav-header', 1, { y: '-100%' }, { y: '0%', ease: 'power2.inOut' })
+      },
+      beforeLeave() {
+        controller.destroy()
+        detailScene.destroy()
       }
     }
   ],
