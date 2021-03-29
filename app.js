@@ -105,12 +105,14 @@ barba.init({
         slideScene.destroy()
         pageScene.destroy()
         controller.destroy()
+        gsap.fromTo('.nav-header', 0.5, { y: '0%' }, { y: '-100%', ease: 'power2.inOut' }, '-=2')
       }
     },
     {
       namespace: 'fashion',
       beforeEnter() {
         logo.href = '../index.html'
+        gsap.fromTo('.nav-header', 1, { y: '-100%' }, { y: '0%', ease: 'power2.inOut' })
       }
     }
   ],
