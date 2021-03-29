@@ -1,6 +1,7 @@
 let controller, slideScene, pageScene
 const mouse = document.querySelector('.cursor')
 const burger = document.querySelector('.burger')
+const logo = document.querySelector('#logo')
 
 const animateSlides = () => {
   controller = new ScrollMagic.Controller()
@@ -98,6 +99,7 @@ barba.init({
       namespace: 'home',
       beforeEnter() {
         animateSlides()
+        logo.href = './index.html'
       },
       beforeLeave() {
         slideScene.destroy()
@@ -106,7 +108,10 @@ barba.init({
       }
     },
     {
-      namespace: 'fashion'
+      namespace: 'fashion',
+      beforeEnter() {
+        logo.href = '../index.html'
+      }
     }
   ],
   transitions: [
@@ -117,12 +122,14 @@ barba.init({
         window.scrollTo(0, 0)
 
         const timeline = gsap.timeline({ defaults: { ease: 'power2.inOut' } })
-        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done })
+        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 })
+        timeline.fromTo('.swipe', 0.75, { x: '-100%' }, { x: '0%', onComplete: done }, '-=0.5')
       },
       enter({ current, next }) {
         let done = this.async()
 
         const timeline = gsap.timeline({ defaults: { ease: 'power2.inOut' } })
+        timeline.fromTo('.swipe', 0.4, { x: '0%' }, { x: '100%', stagger: 0.25 })
         timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done })
       }
     }

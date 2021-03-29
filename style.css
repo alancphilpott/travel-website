@@ -299,3 +299,25 @@ main {
 .fashion3 h1 {
   color: var(--mountain);
 }
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe1 {
+  background: var(--hike);
+  z-index: 5;
+}
+.swipe2 {
+  background: var(--mountain);
+  z-index: 4;
+}
+.swipe3 {
+  background: var(--fashion);
+  z-index: 3;
+}
