@@ -108,6 +108,24 @@ barba.init({
     {
       namespace: 'fashion'
     }
+  ],
+  transitions: [
+    {
+      leave({ current, next }) {
+        let done = this.async()
+
+        window.scrollTo(0, 0)
+
+        const timeline = gsap.timeline({ defaults: { ease: 'power2.inOut' } })
+        timeline.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done })
+      },
+      enter({ current, next }) {
+        let done = this.async()
+
+        const timeline = gsap.timeline({ defaults: { ease: 'power2.inOut' } })
+        timeline.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done })
+      }
+    }
   ]
 })
 
