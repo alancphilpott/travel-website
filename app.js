@@ -105,7 +105,7 @@ const detailAnimation = () => {
     slideTimeline.fromTo(slide, { opacity: 1 }, { opacity: 0 })
     slideTimeline.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, '-=0.75')
 
-    slideTimeline.fromTo(nextImg, { opacity: 0 }, { opacity: 1 })
+    slideTimeline.fromTo(nextImg, { opacity: 0 }, { opacity: 1 }, '-=2')
     slideTimeline.fromTo(nextImg, { x: '50%' }, { x: '0%' }, '-=1.3')
     slideTimeline.fromTo(nextImg, { y: '-50%' }, { y: '0%' }, '-=1.3')
 

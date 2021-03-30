@@ -332,6 +332,40 @@ main {
     padding-bottom: 3rem;
     font-size: 1.5rem;
   }
+
+  .detail-slide {
+    padding-top: 5rem;
+  }
+
+  .fashion3 {
+    margin-bottom: 6rem;
+  }
+
+  .fashion-text p {
+    margin-bottom: 5rem;
+    padding: 0;
+  }
+
+  .fashion-text h1 {
+    margin: 1.5rem 0;
+  }
+
+  .fashion-nr {
+    font-size: 10rem;
+    left: 48%;
+    bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 1635px) {
+  .fashion-text h1 {
+    margin: 0;
+    font-size: 4.5rem;
+  }
+
+  .fashion-text p {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 1450px) {
@@ -341,6 +375,25 @@ main {
 
   .hero-desc h2 {
     font-size: 2.5rem;
+  }
+
+  .detail-slide {
+    padding-top: 0;
+  }
+
+  .fashion-text p {
+    font-size: 1.7rem;
+    padding: 0 2rem 0 0;
+  }
+
+  .fashion-img img {
+    height: 70vh;
+    float: right;
+    width: 90%;
+  }
+
+  .fashion-nr {
+    left: 38%;
   }
 }
 
@@ -369,6 +422,32 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .fashion-text {
+    flex-basis: 10rem;
+  }
+
+  .fashion-text h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .fashion-text p {
+    font-size: rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fashion-img img {
+    height: 70vh;
+    width: 80%;
+    object-position: top;
+  }
+
+  .fashion-nr {
+    left: 35%;
+    bottom: 10%;
   }
 }
 
@@ -416,20 +495,35 @@ main {
 
   .detail-slide {
     width: 100%;
+    display: block;
+    padding-top: 0;
     text-align: center;
   }
 
+  .fashion3 {
+    margin: 0;
+  }
+
   .fashion-text p {
-    margin-bottom: 5rem;
+    font-size: 1.6rem;
+    margin: 0 2rem 5rem 2rem;
     padding: 0;
   }
 
   .fashion-text h1 {
-    margin: 2rem 0;
+    font-size: 4rem;
+  }
+
+  .fashion-img img {
+    height: 50vh;
+    width: 100%;
+    object-position: top;
   }
 
   .fashion-nr {
     font-size: 8rem;
+    left: 75%;
+    bottom: 12%;
   }
 
   .nav-bar {
@@ -478,6 +572,16 @@ main {
 
   .hero-img img {
     height: 30vh;
+  }
+
+  .fashion-text h1 {
+    font-size: 3rem;
+  }
+
+  .fashion-text p {
+    font-size: 1.4rem;
+    margin: 0 0 3rem 0;
+    padding: 0 1rem;
   }
 
   .nav-bar {
