@@ -174,7 +174,7 @@ barba.init({
 })
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1300) {
     window.addEventListener('mousemove', cursor)
     window.addEventListener('mouseover', activeCursor)
   } else {
@@ -184,7 +184,7 @@ window.addEventListener('resize', () => {
 })
 
 window.onload = () => {
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1300) {
     window.addEventListener('mousemove', cursor)
     window.addEventListener('mouseover', activeCursor)
   }
