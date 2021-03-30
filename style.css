@@ -235,7 +235,6 @@ main {
 
 .scrollmagic-pin-spacer {
   position: static !important;
-  overflow-x: hidden;
 }
 
 /* Fashion Page */
@@ -516,7 +515,6 @@ main {
     height: 50vh;
     width: 100%;
     object-position: top;
-    /* overflow-x: hidden; */
   }
 
   .fashion-nr {
@@ -571,7 +569,6 @@ main {
 
   .hero-img img {
     height: 30vh;
-    /* overflow-x: hidden; */
   }
 
   .fashion-text h1 {
@@ -596,10 +593,11 @@ main {
   }
 
   .nav-links h3 {
+    font-size: 1.5rem;
     padding: 1rem 0;
   }
 
   .contact h2 {
-    padding: 1rem 0;
+    padding: 0;
   }
 }

@@ -103,8 +103,8 @@ const detailAnimation = () => {
     const nextImg = nextSlide.querySelector('img')
 
     slideTimeline.fromTo(slide, { opacity: 1 }, { opacity: 0 })
-    slideTimeline.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, '-=1')
-    // slideTimeline.fromTo(nextImg, { x: '20%' }, { x: '0%' }, '-=0.5')
+    slideTimeline.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, '-=0.5')
+    slideTimeline.fromTo(nextImg, { y: '1%' }, { y: '0%' }, '-=0.5')
 
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,
