@@ -576,6 +576,7 @@ main {
 
   .fashion-text h1 {
     font-size: 3rem;
+    padding: 2rem 0 1rem 0;
   }
 
   .fashion-text p {
@@ -584,8 +585,21 @@ main {
     padding: 0 1rem;
   }
 
+  .fashion-nr {
+    left: 70%;
+    bottom: 8%;
+  }
+
   .nav-bar {
     display: block;
     text-align: center;
+  }
+
+  .nav-links h3 {
+    padding: 1rem 0;
+  }
+
+  .contact h2 {
+    padding: 1rem 0;
   }
 }
