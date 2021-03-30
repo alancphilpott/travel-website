@@ -516,6 +516,7 @@ main {
     height: 50vh;
     width: 100%;
     object-position: top;
+    overflow-x: hidden;
   }
 
   .fashion-nr {
@@ -570,6 +571,7 @@ main {
 
   .hero-img img {
     height: 30vh;
+    overflow-x: hidden;
   }
 
   .fashion-text h1 {
