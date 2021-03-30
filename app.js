@@ -173,6 +173,21 @@ barba.init({
   ]
 })
 
-window.addEventListener('mousemove', cursor)
-window.addEventListener('mouseover', activeCursor)
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1024) {
+    window.addEventListener('mousemove', cursor)
+    window.addEventListener('mouseover', activeCursor)
+  } else {
+    window.removeEventListener('mousemove', cursor)
+    window.removeEventListener('mouseover', activeCursor)
+  }
+})
+
+window.onload = () => {
+  if (window.innerWidth > 1024) {
+    window.addEventListener('mousemove', cursor)
+    window.addEventListener('mouseover', activeCursor)
+  }
+}
+
 burger.addEventListener('click', navToggle)
