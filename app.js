@@ -181,7 +181,7 @@ window.addEventListener('resize', () => {
   } else {
     window.removeEventListener('mousemove', cursor)
     window.removeEventListener('mouseover', activeCursor)
-    document.querySelector('.cursor').style.transform = ' translate(-150%, -150%)'
+    document.querySelector('.cursor').style.transform = 'translate(-150%, -150%)'
   }
 })
 
@@ -189,7 +189,7 @@ window.onload = () => {
   if (window.innerWidth > 1300) {
     window.addEventListener('mousemove', cursor)
     window.addEventListener('mouseover', activeCursor)
-    document.querySelector('.cursor').style.transform = ' translate(-50%, -50%)'
+    document.querySelector('.cursor').style.transform = 'translate(-50%, -50%)'
   }
 }
 

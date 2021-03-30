@@ -384,13 +384,10 @@ main {
 
   .fashion-text p {
     font-size: 1.7rem;
-    padding: 0 2rem 0 0;
   }
 
   .fashion-img img {
-    height: 70vh;
     float: right;
-    width: 90%;
   }
 
   .fashion-nr {
@@ -523,7 +520,7 @@ main {
 
   .fashion-nr {
     font-size: 8rem;
-    left: 75%;
+    left: 5%;
     bottom: 12%;
   }
 
@@ -587,8 +584,8 @@ main {
   }
 
   .fashion-nr {
-    left: 70%;
-    bottom: 8%;
+    left: 5%;
+    bottom: 12%;
   }
 
   .nav-bar {
